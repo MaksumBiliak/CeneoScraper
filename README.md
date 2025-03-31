@@ -12,7 +12,7 @@ https://www.ceneo.pl/84514582#tab=reviews_scroll
 ## Analyzis of teh structure of the webpage
 |component|selector|variable|
 |---------|--------|--------|
-|opinion| div.js_product-review|opinion |
+|opinion| div.js_product-review:not(user-post--highlight)|opinion |
 |opinion ID |[data-entry-id] |opinion_id |
 |author |user-post__author-name| author|
 |recomendation |span.user-post_author-recomendation > em|recommendation |
@@ -22,5 +22,5 @@ https://www.ceneo.pl/84514582#tab=reviews_scroll
 |list of disadvantages |review-feature__item review-feature__item--negative |cons |
 |for how many helpfull |button.vote-yes[data-total-vote] |vote_yes |
 |for how many unhelpfull  |button.vote-no[data-total-vote]  |vote_no |
-|publishig date |span.user-post__published > time:nth-child(1)[datetime]|published |
+|publishig date |opinion.select_one("user-post__author-name")|published |
 |purchase date |span.user-post__published > time:nth-child(2)[datetime] |purchased |
